@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+div#area {
+    font: normal 20pt Arial;
+    background-color: hsl(239, 100%, 50%);
+    color: rgba(247, 240, 240, 0.788);
+    width: 350px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>          <!--Quando eu clicar, em cima da <Div> ele vai disparar o clicar-->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> 
+        Interaja...
+    </div> 
+    <script>
+    /*isso aqui é uma função anomima, funciona sem problema no Js, só tem que colocar um nome para poder, poder encontrar essa função, tudo que estiver aqui dentro, só vai ser executado, quando eu chamar o ( clicar) então quando eu chamar o clicar, ele vai executar tudo que
+    está aqui dentro*/   /*Essa é a configuração básica, eu tenho que disparar, configurar o método e esse método só vai ser disparado */ /*Quando eu clicar, eu vou fazer o seguinte: o ((interaja)) vai mudar o conteúdo dele, para eu mudar o conteúdo dele, para eu mudar conteúdo dele, eu tenho que ver dentro da minha arvoré ((Dom)), isso aqui ´´e uam <div> de ID"AREA".....eu posso fazer isso: var a = window.document.getElementById('area')  pode adicionar ID ou querySelector...vou adicionar: ById....não está no plural, então mão tem que usar colchetes, vou colocar entre  aspas simples, esse nome é igual a esse ID, então esse daqui é o meu objeto (a), meu objeto (a) está ligado, diretamente com essa <div> 13:27,  */ 
+
+        var a = window.document.getElementById('area')
+
+         //Então fiz 3 metódos  criei um objeto, aqui do lado de fora pra ficar com o escopo global, de forma resumida quando crio isso do lado de fora ele, serve para as 3 functions, se eu pego isso aqui: var a = window.document.getElementById('area') e coloco dentro ele só serve, para function clicar, não serviria para as outras,....então tem que colocar do lado de fora issop, gera uma pequeno problema... mais pra frente na aula iremos entender... no aprofundamento de JavaScript vc vai entender isso..salva e atualiza>>> Entrou e saiu, ((ainda sem clicar)) >> Cliquei, clicou✅ ((Entrou->Clique->Clicou✅->Saiu))   15:56 
+        
+        function clicar() {
+        
+        a.innerText = 'Clicou'
+        a.style.background ='red'
+
+        // 16:04 outra coisa que vou fazer é: quando eu clicar, eu também vou mudar o style dele, e mudar o----------> background para "red", quando eu clicar ele vai ficar vermelho, e quando sair ele vai voltar ficar verde, ou da cor aplicada. ....16:17
+        }
+        function entrar(){
+        a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!👨‍💻'
+            a.style.background = 'red'
+        }
+    //16:17--->fucionar--->Entrou e saiu---quando entrar e ((clica))----altera a cor, é quando sair volta---a--->((cor))
+    </script>
+    <!--16:30--A interatividade que tenho com a ((div)) eu posso fazer comqualquer um é  -->
+</body>
+</html>
