@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Projeto: Avalie o serviço!</title>
+</head>
+ <style>
+    button{
+        color: hsl(0, 85%, 35%);
+        font: 15pt negrito;
+    }
+    b0{
+        color: hsla(231, 95%, 48%, 0.555);
+        font: normal 20pt Sublinhado;
+    }
+ </style>
+<body>
+    <p>
+        <b0>Avalie o serviço:</b0>
+    </p>
+    
+        <label for="very-poor">
+            <input type="radio" name="rate" value="Very poor" id="very-poor"> Pessímo
+        </label>
+        
+        <label for="poor">
+            <input type="radio" name="rate" value="Poor" id="poor"> Fraco
+        </label>
+        
+        <label for="ok">
+            <input type="radio" name="rate" value="OK" id="ok"> Ok
+        </label>
+        
+        <label for="good">
+            <input type="radio" name="rate" value="Good"> Bom
+        </label>
+        
+        <label for="very-good">
+            <input type="radio" name="rate" value="Very Good" id="very-good"> Ótimo
+        </label>
+       
+    </p>
+    <p>
+        <!--<input type="Button" style="width:120;height:10" value="Corrija">-->
+        <Button id="btnRate" width="50" height ="60"> <b1>Confirme</b1></button>
+
+    </p>
+    <p id="output"></p>
+    <script>
+        let btn = document.getElementById('btnRate');
+        let output = document.getElementById('output');
+
+        btn.addEventListener('click', () => {
+            let rates = document.getElementsByName('rate');
+            rates.forEach((rate) => {
+                if (rate.checked) {
+                    output.innerText = `You selected: ${rate.value}`;
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
